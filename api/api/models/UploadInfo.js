@@ -17,6 +17,8 @@ class UploadInfo extends Model {
           },
           key: 'id'
         },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
         allowNull: false
       },
       yard_code: {
