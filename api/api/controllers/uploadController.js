@@ -25,7 +25,7 @@ const uploadFile = async (request, response) => {
         const uploads = await UploadInfo.bulkCreate(uploadInfos)
         fs.unlinkSync(request.file.path)
 
-        return response.status(200).json({ error: false, data: uploads })
+        return response.status(200).json({ error: false, data: { upload: { ...upload }, upload_info: uploads } })
       })
   } catch (error) {
     return response.status(500).json({ error: true, data: error.message })
