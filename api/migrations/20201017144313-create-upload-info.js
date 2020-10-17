@@ -17,6 +17,8 @@ module.exports = {
           },
           key: 'id'
         },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
         allowNull: false
       },
       yard_code: {

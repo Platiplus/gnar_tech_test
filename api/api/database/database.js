@@ -4,14 +4,21 @@ const dbConfig = require('../../config/database')
 const Upload = require('../models/Upload')
 const UploadInfo = require('../models/UploadInfo')
 
-const connection = new Sequelize(dbConfig)
+class Database {
+  connect (environment = 'production') {
+    // CONNECTION
+    const connection = new Sequelize(dbConfig(environment))
 
-// INITIALIZATION
-Upload.init(connection)
-UploadInfo.init(connection)
+    // MODEL INITIALIZATION
+    Upload.init(connection)
+    UploadInfo.init(connection)
 
-// ASSOCIATION
-Upload.associate(connection.models)
-UploadInfo.associate(connection.models)
+    // MODEL ASSOCIATION
+    Upload.associate(connection.models)
+    UploadInfo.associate(connection.models)
 
-module.exports = connection
+    return connection
+  }
+}
+
+module.exports = Database
