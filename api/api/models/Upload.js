@@ -9,7 +9,7 @@ class Upload extends Model {
         primaryKey: true,
         allowNull: false
       },
-      nome: {
+      name: {
         type: DataTypes.STRING,
         allowNull: false
       }
@@ -19,7 +19,7 @@ class Upload extends Model {
   }
 
   static associate (models) {
-    this.hasOne(models.UploadInfo, { foreignKey: 'id_upload', as: 'upload_info' })
+    this.hasMany(models.UploadInfo, { foreignKey: 'id_upload', as: 'upload_infos' })
   }
 }
 
