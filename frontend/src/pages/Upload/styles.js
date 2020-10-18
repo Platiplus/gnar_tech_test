@@ -75,18 +75,16 @@ export const FileInputIcon = styled.img`
 export const FileInputLabel = styled.label`
   color: #6A6C72;
   position: absolute;
-  margin-top: 12px;
   margin-left: 8px;
   text-overflow: ellipsis;
   display: inline-block;
   overflow: hidden;
-  width: 300px;
+  width: 320px;
   white-space: nowrap;
   vertical-align: middle;
-
-  ${media.lessThan('medium')`
-    width: 240px;
-  `}
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 `
 
 export const TextInputLabel = styled.label`

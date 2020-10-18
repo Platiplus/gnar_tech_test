@@ -36,7 +36,8 @@ export const ListItem = styled.li`
   cursor:pointer;
 
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-left: 24px;
   align-items: center;
 
   &:hover {
@@ -71,6 +72,7 @@ export const Card = styled.div`
   justify-content: flex-start;
   background-color: #F8F8F8;
   border-radius: 8px;
+  padding: 0 24px 16px 24px;
 `
 
 export const CardTitle = styled.p`
