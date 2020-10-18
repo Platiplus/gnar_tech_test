@@ -1,5 +1,12 @@
 import React from 'react'
-import { WrapperItem, LeftSide, ProgressBar, Progress, FileName, Percentage} from './styles'
+import {
+  WrapperItem,
+  LeftSide,
+  ProgressBar,
+  Progress,
+  FileName,
+  Percentage
+} from './styles'
 
 const UploadItem = props => {
   const { file, progress } = props.file

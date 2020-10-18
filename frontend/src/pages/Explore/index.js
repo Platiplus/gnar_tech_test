@@ -2,7 +2,17 @@ import React, { useEffect, useState } from 'react'
 import axios from '../../configuration/axios'
 import Select from 'react-select'
 import useWindowDimensions from '../../utils/windowResizeHook'
-import { RowWrapper, ItemList, ListHeader, ListItem, Table, TableCell, MobileWrapper, Card, CardTitle } from './styles'
+import { 
+  RowWrapper,
+  ItemList,
+  ListHeader,
+  ListItem,
+  Table,
+  TableCell,
+  MobileWrapper,
+  Card,
+  CardTitle
+} from './styles'
 
 const Explore = () => {
   const [menuFiles, setMenuFiles] = useState([])

@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import MenuItems from '../../constants/menu_items';
-import { NavBarItems, NavMenu, NavTitle, MenuIcon, Logo } from './styles';
 import IMAGES from '../../constants/images'
 import './support.css'
+import {
+  NavBarItems,
+  NavMenu,
+  NavTitle,
+  MenuIcon,
+  Logo
+} from './styles';
 
 const Navbar = () => {
   const [ menuClicked, setMenuClicked ] = useState(false)

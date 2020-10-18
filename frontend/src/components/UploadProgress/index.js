@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { size, toArray } from 'lodash'
 
-import { uploadFile } from '../../redux/actions/'
+import { uploadFile } from '../../redux/actions'
 import UploadItem from '../UploadItem'
 import { Wrapper } from './styles'
 
