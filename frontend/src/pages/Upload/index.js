@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import { setUploadFile } from '../../redux/actions'
-import UploadProgress from '../../components/UploadProgress'
+import { UploadProgress } from '../../components'
 import IMAGES from '../../constants/images'
 import { 
   RowWrapper,

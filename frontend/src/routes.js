@@ -1,6 +1,6 @@
 import React from 'react'
 import { Provider } from 'react-redux'
-import NavBar from './components/Navbar'
+import { NavBar } from './components'
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 
 // REDUX STORE
