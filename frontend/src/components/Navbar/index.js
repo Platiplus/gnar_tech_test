@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import MenuItems from '../../constants/menu_items';
-import { NavBarItems, NavMenu, NavLink, MenuIcon, Logo } from './styles';
+import { NavBarItems, NavMenu, NavTitle, MenuIcon, Logo } from './styles';
 import IMAGES from '../../constants/images'
+import './support.css'
 
 const Navbar = () => {
   const [ menuClicked, setMenuClicked ] = useState(false)
@@ -17,11 +18,11 @@ const Navbar = () => {
         {
           MenuItems.map((item, idx) => {
             return (
-              <Link key={idx} onClick={() => {setMenuClicked(!menuClicked)}} to={item.url}>
-                <NavLink>
+              <NavLink activeClassName="navbar_link_active" key={idx} onClick={() => {setMenuClicked(false)}} to={item.url}>
+                <NavTitle>
                   {item.title}
-                </NavLink>
-              </Link>
+                </NavTitle>
+              </NavLink>
             )
           })
         }

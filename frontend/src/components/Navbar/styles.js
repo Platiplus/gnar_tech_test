@@ -2,7 +2,7 @@ import styled from 'styled-components/macro'
 import media from 'styled-media-query'
 
 export const NavBarItems = styled.nav`
-  background-color: #CCCCCC;
+  background-color: #263043;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -34,7 +34,7 @@ export const NavMenu = styled.ul`
   justify-content: end;
 
   a {
-    color: #000000;
+    color: #FFFFFF;
     text-decoration: none;
     &:hover {
         color: #FFFFFF;
@@ -53,7 +53,7 @@ export const NavMenu = styled.ul`
     transition: all 0.5s ease;
 
     ${({ active }) => active && `
-      background-color: #CCCCCC;
+      background-color: #263043;
       left: 0;
       opacity: 1;
       transition: all 0.5 ease;
@@ -65,6 +65,7 @@ export const NavMenu = styled.ul`
 
 export const MenuIcon = styled.div`
   display: none;
+  color: #FFFFFF;
 
   ${media.lessThan('medium')`
     display: block;
@@ -77,7 +78,7 @@ export const MenuIcon = styled.div`
   `}
 `
 
-export const NavLink = styled.li` 
+export const NavTitle = styled.li` 
   padding: 0.5rem 1rem;
   cursor: pointer;
   
