@@ -1,0 +1,59 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./raw_scripts.sql:/docker-entrypoint-initdb.d/raw_scripts.sql
+    environment:
+      POSTGRES_PASSWORD: gnar
+      POSTGRES_USER: gnar
+      POSTGRES_DB: gnar_tech_test
+    networks:
+      - app-network
+    restart: always
+
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    command: npm start
+    volumes:
+      - ./api:/usr/src/app
+      - /usr/src/app/node_modules
+    networks:
+      - app-network
+    restart: always
+    environment:
+      - PORT=8000
+      - DB_DIALECT=postgres
+      - DB_HOST=postgres
+      - DB_USERNAME=gnar
+      - DB_PASSWORD=gnar
+      - DB_DATABASE=gnar_tech_test
+      - SSL=false
+    links:
+      - postgres
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    working_dir: /usr/src/app
+    volumes:
+      - ./frontend:/usr/src/app
+      - /usr/src/app/node_modules
+    networks:
+      - app-network
+    environment:
+      - REACT_APP_APIURL=http://localhost:8000/
+
+networks:
+  app-network:
+    driver: bridge
