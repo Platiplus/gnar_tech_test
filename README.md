@@ -18,21 +18,23 @@ In case you want to run the project with Docker containers:
 * [Docker](https://www.docker.com/)
 * [Docker Compose](https://docs.docker.com/compose/install/)
 
-In case you just want to see the end result, you can see at the following link:  
-* [Heroku Build](https://pacific-woodland-57110.herokuapp.com/)  
-
-##### Ps: You will probably have to navigate between pages and do a reload to wake up the free apps hehehe
-
 Detailed information on how to install those applications are provided in the links above
 
 ### Running the project
 
-#### Docker and Docker-compose
+#### Heroku :cloud:
+You can access the project with the following link:
+* [Heroku Build](https://pacific-woodland-57110.herokuapp.com/)  
+##### Ps: You will probably have to navigate between pages and do a reload to wake up the free apps hehehe
+
+#### Docker and Docker-compose :whale:
 To install the project through docker, go to the root folder of the project and run the command `docker-compose up --build`.
+
+Depending on your machine specs, this process can take SEVERAL minutes, go get a coffee while it builds! :coffee:
 
 You can see the project on your browser at 'http://localhost'
 
-#### Locally
+#### Locally :house:
 In case you want to install the project without using Docker containers, go inside the root folders of the applications (api and frontend) and run the command ```npm install``` in both of them.
 
 Run the command `node server.js` in the api folder.
