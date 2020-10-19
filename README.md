@@ -19,8 +19,9 @@ In case you want to run the project with Docker containers:
 * [Docker Compose](https://docs.docker.com/compose/install/)
 
 In case you just want to see the end result, you can see at the following link:  
-[Heroku Build](https://pacific-woodland-57110.herokuapp.com/)  
-Ps: You will probably have to navigate between pages and do a reload to wake up the free apps hehehe
+* [Heroku Build](https://pacific-woodland-57110.herokuapp.com/)  
+
+##### Ps: You will probably have to navigate between pages and do a reload to wake up the free apps hehehe
 
 Detailed information on how to install those applications are provided in the links above
 
@@ -45,7 +46,7 @@ A new tab will open automatically in your browser, but in case it didn't, you ca
 * Upload a csv file at the uploads page
 * See the upload file content on the explore page.
 
-PS: The project isn't ENTIRELY responsive, but it has a 'budget' mobile version, try to check it out on your phone using the Heroku link
+##### PS: The project isn't ENTIRELY responsive, but it has a 'budget' mobile version, try to check it out on your phone using the Heroku link
 
 ## Developed with
 

@@ -120,6 +120,8 @@ export const UploadButton = styled.button`
   font-weight: bold;
   color: #263043;
 
+  cursor: pointer;
+  
   &:disabled {
     background: #E5E5E5;
     border: 1px solid #E5E5E5;
